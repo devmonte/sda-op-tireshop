@@ -1,6 +1,4 @@
-using System;
-
-namespace TireShop.Models
+namespace Web.Models
 {
     public class ErrorViewModel
     {
