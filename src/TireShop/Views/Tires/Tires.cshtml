@@ -1,0 +1,18 @@
+﻿@model List<Core.Entities.Tire>
+<p>All of our available tires!</p>
+<div class="container">
+    @for (int i = 0; i < Model.Count; i+=2)
+    {
+        <div class="row mb-4">
+            <div class="col-sm-6">
+                <partial name="_Tire" model="Model[i]"/>
+            </div>
+            @if (i + 1 != Model.Count)
+            {
+                <div class="col-sm-6">
+                    <partial name="_Tire" model="Model[i+1]"/>
+                </div>
+            }
+        </div>
+    }
+</div>
